@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main-title">To Do List</h1>
+      <!-- Judul utama paling atas -->
+      <div class="stats">
+        <div class="stat-box">
+          <div>TOTAL TASKS</div>
+          <div class="stat-num" id="stat-total">0</div>
+        </div>
+        <div class="stat-box">
+          <div>COMPLETED</div>
+          <div class="stat-num" id="stat-completed">0</div>
+        </div>
+        <div class="stat-box">
+          <div>PENDING</div>
+          <div class="stat-num" id="stat-pending">0</div>
+        </div>
+        <div class="stat-box">
+          <div>PROGRESS</div>
+          <div class="stat-num" id="stat-progress">0%</div>
+        </div>
+      </div>
+      <hr />
+      <form id="todo-form" class="form-row">
+        <input type="text" id="todo-input" class="input-blue" placeholder="Add a todo . . ." required />
+        <input type="date" id="todo-date" class="input-blue" required />
+        <button type="submit" id="add-btn" class="btn-blue">+</button>
+      </form>
+      <div class="action-row">
+        <input type="text" id="search-input" class="input-blue" placeholder="Search tasks... (Ctrl+F)" />
+        <button id="filter-btn" class="btn-outline">FILTER</button>
+        <button id="delete-all" class="btn-danger">🗑 DELETE ALL</button>
+      </div>
+      <table id="task-table">
+        <thead>
+          <tr>
+            <th>TASK</th>
+            <th>DUE DATE</th>
+            <th>STATUS</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody id="todo-list">
+          <tr>
+            <td colspan="4" style="text-align: center; color: #b6b8bf">No tasks found</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
